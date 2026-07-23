@@ -26,94 +26,71 @@ export default function App() {
       <main className="min-h-screen bg-background text-foreground">
         <div className="mx-auto flex w-full max-w-5xl flex-col px-4 py-5 sm:px-6">
           <header className="mb-8 flex flex-wrap items-start justify-between gap-4">
-            <div className="max-w-3xl space-y-3">
-              <h1 className="leading-none">
-                <img
-                  src={BANNER_SRC}
-                  alt="DreamPhraseGPT"
-                  className="h-auto w-full max-w-md sm:max-w-lg"
-                />
-              </h1>
-              <p className="text-sm leading-6 text-muted-foreground sm:text-base">
-                DreamPhraseGPT trains a character-level transformer on any newline-delimited text
-                file and can generate strings that follow the character patterns, structure, and
-                common sequences learned from that dataset.
-              </p>
+            <div className="flex gap-2 justify-between w-full">
               <p className="text-sm text-muted-foreground">
-                Research and implementation by Christian Paul{" "}
                 <HeaderLinkButton
                   ariaLabel="Open Christian Paul's GitHub profile"
                   href={PROFILE_URL}
-                  label="@cpauldev"
-                  size="xs"
+                  label="Research and implementation by Christian Paul"
                   variant="link"
-                  className="h-auto px-0 text-sm text-foreground"
                 />
               </p>
-            </div>
-
-            <div className="flex items-center gap-2">
-              <Button
-                variant="outline"
-                size="icon"
-                aria-label={
-                  resolvedTheme === "dark" ? "Switch to light mode" : "Switch to dark mode"
-                }
-                onClick={toggleTheme}
-              >
-                {resolvedTheme === "dark" ? <Sun /> : <Moon />}
-              </Button>
-
-              <PreviewCard>
-                <PreviewCardTrigger
-                  delay={300}
-                  render={
-                    <Button
-                      render={
-                        <a
-                          href={REPO_URL}
-                          target="_blank"
-                          rel="noreferrer"
-                          aria-label="View repository on GitHub"
-                        >
-                          <Github />
-                          View on GitHub
-                          <ArrowUpRight />
-                        </a>
-                      }
-                      variant="outline"
-                      className="gap-2"
-                    />
+              <div className="flex gap-2">
+                <Button
+                  variant="outline"
+                  size="icon"
+                  aria-label={
+                    resolvedTheme === "dark" ? "Switch to light mode" : "Switch to dark mode"
                   }
-                />
-                <PreviewCardPopup
-                  align="end"
-                  sideOffset={8}
-                  className="w-80 max-w-[calc(100vw-2rem)] text-wrap"
+                  onClick={toggleTheme}
                 >
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-2">
-                      <Github className="size-4 shrink-0" />
-                      <span className="font-semibold text-sm">cpauldev/dreamphrase-gpt</span>
+                  {resolvedTheme === "dark" ? <Sun /> : <Moon />}
+                </Button>
+
+                <PreviewCard>
+                  <PreviewCardTrigger
+                    delay={300}
+                    render={
+                      <Button
+                        render={
+                          <a
+                            href={REPO_URL}
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label="View repository on GitHub"
+                          >
+                            <Github />
+                            View on GitHub
+                            <ArrowUpRight />
+                          </a>
+                        }
+                        variant="outline"
+                        className="gap-2"
+                      />
+                    }
+                  />
+                  <PreviewCardPopup
+                    align="end"
+                    sideOffset={8}
+                    className="w-80 max-w-[calc(100vw-2rem)] text-wrap"
+                  >
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-2">
+                        <Github className="size-4 shrink-0" />
+                        <span className="font-semibold text-sm">cpauldev/dreamphrase-gpt</span>
+                      </div>
+                      <p className="text-xs leading-5 text-muted-foreground">
+                        Train a character-level GPT on newline-delimited text files and generate new
+                        strings that follow the character patterns, structure, and common sequences
+                        learned from the dataset.
+                      </p>
                     </div>
-                    <p className="text-xs leading-5 text-muted-foreground">
-                      Train a character-level GPT on newline-delimited text files and generate new
-                      strings that follow the character patterns, structure, and common sequences
-                      learned from the dataset.
-                    </p>
-                    <a
-                      href={REPO_URL}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center gap-1 text-xs text-foreground underline-offset-4 hover:underline"
-                    >
-                      View on GitHub
-                      <ArrowUpRight className="size-3" />
-                    </a>
-                  </div>
-                </PreviewCardPopup>
-              </PreviewCard>
+                  </PreviewCardPopup>
+                </PreviewCard>
+              </div>
             </div>
+
+            <img src={BANNER_SRC} alt="DreamPhraseGPT" className="h-auto w-full rounded-3xl" />
           </header>
 
           <section className="grid gap-6 lg:grid-cols-2">

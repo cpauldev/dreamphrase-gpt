@@ -54,7 +54,7 @@ type ModelCatalogEntry = {
 const MODEL_CATALOG: ModelCatalogEntry[] = [
   {
     bundlePath: "models/english_words.model",
-    description: "Trained on about 370,000 English words in 27 seconds.",
+    description: "Trained on over 370,000 English Words in 27 seconds.",
     metadata: {
       blockSize: 32,
       bosId: 26,
@@ -74,11 +74,11 @@ const MODEL_CATALOG: ModelCatalogEntry[] = [
       },
       vocabSize: 27,
     },
-    title: "Words",
+    title: "English Words",
   },
   {
     bundlePath: "models/us_baby_names.model",
-    description: "Trained on about 105,000 U.S. baby names in 27 seconds.",
+    description: "Trained on over 105,000 U.S. Baby Names in 27 seconds.",
     metadata: {
       blockSize: 32,
       bosId: 52,
@@ -98,7 +98,7 @@ const MODEL_CATALOG: ModelCatalogEntry[] = [
       },
       vocabSize: 53,
     },
-    title: "Baby Names",
+    title: "U.S. Baby Names",
   },
 ];
 

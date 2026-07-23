@@ -1,23 +1,16 @@
-![DreamPhraseGPT banner](assets/dreamphrasegpt.png)
+![DreamPhraseGPT preview](assets/dreamphrasegpt-preview.png)
 
 # DreamPhraseGPT
 
 `DreamPhraseGPT` trains a character-level transformer on any newline-delimited text file and can generate strings that follow the character patterns, structure, and common sequences learned from that dataset.
 
-[Live demo](https://cpauldev.github.io/dreamphrase-gpt/)
+It uses Python/PyTorch, supports saved and resumable runs, trains via CPU, CUDA, and Apple Silicon / Metal Performance Shaders (MPS) with an optional torch.compile, ONNX export, a CLI artifact manager, and a bundled JavaScript runtime (utilized by the live demo).
 
-<details>
-<summary>Preview</summary>
-
-![DreamPhraseGPT preview](assets/dreamphrasegpt-preview.png)
-
-</details>
+## [Live demo](https://cpauldev.github.io/dreamphrase-gpt/)
 
 Example outputs trained on English words include `glossoscope`, `heartways`, `bulletine`, `joulemaker`, `braqueousness`, `chlorosiphon`, `langeling`, `margariums`, `outtravelers`, and `zamoralize`.
 
 Example outputs trained on U.S. baby names include `Miryella`, `Beliana`, `Camiliah`, `Cheraine`, `Leeandro`, `Eivyn`, `Franceline`, `Jadiza`, `Dejanell`, and `Zalinda`.
-
-*It supports saved and resumable runs, CPU, CUDA, Apple Silicon / MPS, and a bundled JavaScript runtime.*
 
 ## Table of contents
 
@@ -35,11 +28,9 @@ Example outputs trained on U.S. baby names include `Miryella`, `Beliana`, `Camil
 
 ## Use cases
 
-`DreamPhraseGPT` is suited to tasks where short generated text should match the character patterns of a source distribution.
+### 1. Research application
 
-### Research application
-
-`DreamPhraseGPT` can generate and score controlled inputs for language-model evaluation and interpretability. Trained on focused data such as English words or short structured strings, it can produce realistic made-up words or short spans in the same style *without pointing to a specific real entity.* This helps separate responses driven by spelling and pattern familiarity from responses driven by prior exposure to a real word or entity.
+`DreamPhraseGPT` can generate and score controlled inputs for language-model evaluation and interpretability. Trained on focused data such as English words or short structured strings, it can produce realistic made-up words or short spans in the same style *without pointing to a specific real entity.* This helps separate responses driven by spelling and pattern familiarity from responses driven by prior exposure to a real word or entity. It can also score or filter candidates by how well they fit the training distribution.
 
 This is relevant to feature- and circuit-analysis workflows such as:
 
@@ -64,9 +55,7 @@ Related interpretability research from Anthropic includes:
 - [Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet](https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html)
 - [On the Biology of a Large Language Model](https://transformer-circuits.pub/2025/attribution-graphs/biology.html)
 
-It can also score or filter candidates by how well they fit the training distribution.
-
-### General application
+### 2. General application
 
 - Procedural content such as place names, species names, fictional languages, or other structured short-form text
 - Baby names based on regional, cultural, or stylistic name lists
