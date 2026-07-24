@@ -6,6 +6,8 @@
 
 It uses Python/PyTorch, trains via CPU, CUDA, and Apple Silicon / Metal Performance Shaders (MPS) with an optional torch.compile, supports resumable runs, ONNX export, a CLI artifact manager, and a bundled JavaScript runtime (utilized by the live demo).
 
+[Train GPT in Browser](https://github.com/cpauldev/train-gpt-in-browser) is the WebGPU/CPU counterpart, which features pure browser-based training.
+
 ## [Live demo](https://cpauldev.github.io/dreamphrase-gpt/)
 
 Example outputs trained on English words include `glossoscope`, `heartways`, `bulletine`, `joulemaker`, `braqueousness`, `chlorosiphon`, `langeling`, `margariums`, `outtravelers`, and `zamoralize`.
