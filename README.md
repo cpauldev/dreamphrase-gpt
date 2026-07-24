@@ -4,7 +4,7 @@
 
 `DreamPhraseGPT` trains a character-level transformer on any newline-delimited text file and can generate strings that follow the character patterns, structure, and common sequences learned from that dataset.
 
-It uses Python/PyTorch, supports saved and resumable runs, trains via CPU, CUDA, and Apple Silicon / Metal Performance Shaders (MPS) with an optional torch.compile, ONNX export, a CLI artifact manager, and a bundled JavaScript runtime (utilized by the live demo).
+It uses Python/PyTorch, trains via CPU, CUDA, and Apple Silicon / Metal Performance Shaders (MPS) with an optional torch.compile, supports resumable runs, ONNX export, a CLI artifact manager, and a bundled JavaScript runtime (utilized by the live demo).
 
 ## [Live demo](https://cpauldev.github.io/dreamphrase-gpt/)
 
